@@ -7,7 +7,7 @@ def suma_matriz(matriz:list):
     suma= 0
     for filas in matriz:
         for dato in filas:
-            sumar+= dato
+            sumar=+ dato
     return suma
 
 # Ejercicio 2: Encontrar el valor máximo en una matriz
@@ -16,7 +16,15 @@ def maximo_matriz(matriz):
     Recibe una lista de listas y devuelve el valor máximo.
     Incluir el código aquí para encontrar el valor máximo en la matriz.
     """
-    pass
+    max= 0
+    for filas in matriz:
+        for dato in filas:
+            if dato> max:
+                max=dato
+            else:
+                max=max 
+    print (max) 
+
 
 # Ejercicio 3: Verificar si un número es primo
 def es_primo(n):
@@ -24,7 +32,12 @@ def es_primo(n):
     Recibe un número y devuelve True si es primo, False en caso contrario.
     Incluir el código aquí para determinar si un número es primo.
     """
-    pass
+    if n <2: 
+        return False
+    for i in range(2,n):
+        if n % i ==0:
+            return False
+        return True
 
 # Ejercicio 4: Transponer una matriz
 def transponer_matriz(matriz):
@@ -32,7 +45,9 @@ def transponer_matriz(matriz):
     Recibe una lista de listas y devuelve la matriz transpuesta.
     Incluir el código aquí para transponer la matriz.
     """
-    pass
+    matriz_t= [[fila[i] for fila in matriz] for i in range(len(matriz[0]))]
+    return matriz_t
+
 
 # Ejercicio 5: Filtrar números pares
 def filtrar_pares(lista):
@@ -40,7 +55,11 @@ def filtrar_pares(lista):
     Recibe una lista de números y devuelve una nueva lista con solo los números pares.
     Incluir el código aquí para filtrar los números pares.
     """
-    pass
+    for dato in lista:
+        mod= dato%2
+        if mod == 0:
+            []
+
 
 # Ejercicio 6: Contar la cantidad de palabras en una frase
 def contar_palabras(frase):
